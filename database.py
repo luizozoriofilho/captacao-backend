@@ -6,7 +6,7 @@ from datetime import datetime
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+DATABASE_URL = os.getenv("https://lwtxxytecyffsynrqkbh.supabase.co")
 
 
 def get_conn():
