@@ -12,10 +12,10 @@ from database import buscar_usuario_por_id, buscar_usuario_por_email
 
 load_dotenv()
 
-SECRET_KEY = os.getenv("SECRET_KEY", "chave-secreta-padrao-troque-em-producao")
+SECRET_KEY = os.getenv("SECRET_KEY", "captacao-secret-2025-dudu")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_DAYS = 30
-ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "")
+ADMIN_EMAIL = os.getenv("ADMIN_EMAIL", "luizozoriofilho@gmail.com")
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
