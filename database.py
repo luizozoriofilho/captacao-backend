@@ -6,7 +6,7 @@ from datetime import datetime
 
 load_dotenv()
 
-DATABASE_URL = os.getenv("postgresql://postgres:czAvHCu3nSwPY3Pt@db.lwtxxytecyffsynrqkbh.supabase.co:5432/postgres")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 def get_conn():
