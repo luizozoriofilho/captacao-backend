@@ -122,6 +122,9 @@ def cadastro(dados: CadastroSchema):
     trial_ate = datetime.utcnow() + timedelta(days=7)
     usuario_id = db.criar_usuario(
         email=dados.email,
+        print(dados.senha)
+        print(type(dados.senha))
+        print(len(str(dados.senha)))
         senha_hash=hash_senha(dados.senha),
         nome=dados.nome,
         trial_ate=trial_ate,
