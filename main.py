@@ -119,12 +119,13 @@ def root():
 def cadastro(dados: CadastroSchema):
     if db.buscar_usuario_por_email(dados.email):
         raise HTTPException(status_code=400, detail="Email já cadastrado")
+    print("SENHA:", dados.senha)
+    print("TIPO:", type(dados.senha))
+    print("TAMANHO:", len(str(dados.senha)))
+
     trial_ate = datetime.utcnow() + timedelta(days=7)
     usuario_id = db.criar_usuario(
         email=dados.email,
-        print(dados.senha)
-        print(type(dados.senha))
-        print(len(str(dados.senha)))
         senha_hash=hash_senha(dados.senha),
         nome=dados.nome,
         trial_ate=trial_ate,
